@@ -85,7 +85,7 @@
                 .replace(/to[ ,.]/g, value => 'tu"' + value[2])
                 .replace(/th/g, 'q')
                 .replace(/ual/g, 'yu"l')
-                .replace(/ea/g, 'e"')
+                .replace(/ea[^y]/g, value => 'e"' + value[2])
                 .replace(/ie/g, 'e"')
                 .replace(/ae/g, 'ay')
                 .replace(/oi/g, 'oy')
