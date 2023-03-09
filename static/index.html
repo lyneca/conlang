@@ -57,6 +57,7 @@
                 .replace(/ui/g, value => 'u"')
                 .replace(/[aeiou"]ce[ ,.]/g, value => value[0] + 's ' + value[3])
                 .replace(/[aeiou]ce[ ,.]/g, value => value[0] + 'ys ' + value[3])
+                .replace(/ by[ ,.]/g, value => value[0] + ' bi" ' + value[3])
                 .replace(/[^aeiou ]y[ ,.]/g, value => value[0] + 'e" ' + value[2])
                 .replace(/[^aeiou ]y[^aeiou ]/g, value => value[0] + 'i"' + value[2])
                 .replace(/the[ ,.]/g, value => 'q` ' + value[3])
