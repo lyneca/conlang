@@ -45,6 +45,8 @@
                 .replace(/ck/g, 'k')
                 .replace(/([^aeiou])\1/g, value => value[0])
                 .replace(/c[aou]/g, value => 'k' + value[1])
+                .replace(/[aei]c[aeiou]/g, value => value[0] + 'ys' + value[2])
+                .replace(/[ou]c[aeiou]/g, value => value[0] + '"s' + value[2])
                 .replace(/c[^aeiouh]/g, value => 'k' + value[1])
                 .replace(/ c[aeiou]/g, value => ' k' + value[2])
                 .replace(/t?ch/g, 'c')
