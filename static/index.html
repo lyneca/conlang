@@ -59,7 +59,7 @@
                 .replace(/pp/, 'p')
                 .replace(/ou[ntrd]/g, value => 'ow' + value[2])
                 .replace(/ou/g, 'o"')
-                .replace(/two/g, 'tu"')
+                .replace(/two[ ,.]/g, value => 'tu"' + value[3])
                 .replace(/a[sndtzlvk]e[ .,]/g, value => `ay${value[1]}${value[3]}`)
                 .replace(/o[sndtzlvk]e[ .,]/g, value => `ow${value[1]}${value[3]}`)
                 .replace(/[eiu][sndtzlvk]e[ .,]/g, value => `${value[0]}"${value[1]}${value[3]}`)
