@@ -27,7 +27,8 @@ main {
 
 #output {
    font-size: 25px;
-   text-align: left;
+   text-align: left !important;
+   width: 100%;
 }
 
 .dalg {

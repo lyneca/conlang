@@ -118,7 +118,7 @@
             for (i = 0; i < maxLength; i++) {
                 if (translation[i] != output[i]) break;
             }
-            document.getElementById("output").innerHTML = `<span class="correct">${output.substr(0, i)}</span>${output.substring(i, output.length).replace("\n", "<br>")}`;
+            document.getElementById("output").innerHTML = `<span class="correct">${output.substr(0, i)}</span>${output.substring(i, output.length).replace(/\n/g, "<br>")}`;
             document.getElementById("preview").innerText = output;
         }
     </script>
