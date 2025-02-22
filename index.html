@@ -35,7 +35,7 @@
         }
         function process(text) {
             return (" " + text.toLowerCase() + " ")
-                .replace(/-/g, ' ')
+                // .replace(/-/g, '-')
                 .replace(/[;?!]/g, '.')
                 .replace(/x/g, 'ks')
                 .replace(/sh/g, 'x')
@@ -111,8 +111,8 @@
             let input = document.getElementById('input');
             let guess = document.getElementById('guess');
             if (clear) guess.value = "";
-            let translation = guess.value.split('\n').map(process).join("\n");
-            let output = input.value.split('\n').map(process).join("\n");
+            let translation = guess.value.split('\n').map(process).join("<br>");
+            let output = input.value.split('\n').map(process).join("<br>");
             let maxLength = Math.min(translation.length, output.length);
             let i = 0;
             for (i = 0; i < maxLength; i++) {
